@@ -1,5 +1,6 @@
 RICEPAPER-INSPIRED SAMPLE — COMMENTED VERSION
 
+
 FILES
 -----
 index.html  = Page structure and content
