@@ -1,0 +1,728 @@
+/* =========================================================
+   GLOBAL / GENERAL STYLES
+   These rules affect the whole website.
+========================================================= */
+
+/* Make width calculations easier.
+   Padding and borders are included inside an element's width. */
+* {
+    box-sizing: border-box;
+}
+
+/* Makes anchor-link scrolling smoother. */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main page defaults. */
+body {
+    /* Remove the browser's default outside margin. */
+    margin: 0;
+
+    /* White page background. */
+    background: #fff;
+
+    /* Default text colour. */
+    color: #333;
+
+    /* Default sans-serif font. */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Default text size. */
+    font-size: 14px;
+}
+
+/* Default styling for every hyperlink. */
+a {
+    /* Remove the standard underline. */
+    text-decoration: none;
+
+    /* Make links inherit their parent's text colour. */
+    color: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+/* Entire header area. */
+.site-header {
+    /* White header background. */
+    background: #fff;
+
+    /* Thin line under the header. */
+    border-bottom: 1px solid #e7e7e7;
+
+    /* Creates a positioning context and keeps header above hero content. */
+    position: relative;
+    z-index: 5;
+}
+
+/* Centers header content and limits its maximum width. */
+.header-inner {
+    /* Prevent header content from becoming too wide. */
+    max-width: 1180px;
+
+    /* Auto left/right margins center the container. */
+    margin: auto;
+
+    /* Space inside the header. */
+    padding: 27px 20px 20px;
+}
+
+
+/* =========================================================
+   LOGO / BRAND
+========================================================= */
+
+/* Wrapper around the "ricepaper" logo. */
+.brand {
+    /* Put logo pieces beside each other. */
+    display: inline-flex;
+
+    /* Align the bottom edges of logo elements. */
+    align-items: flex-end;
+
+    /* Tighten line spacing. */
+    line-height: 0.8;
+
+    /* Space between logo and navigation. */
+    margin-bottom: 28px;
+}
+
+/* Shared styling for both parts of the logo. */
+.brand-rice,
+.brand-paper {
+    /* Serif typeface gives the logo an editorial look. */
+    font-family: Georgia, "Times New Roman", serif;
+
+    /* Large logo text. */
+    font-size: 58px;
+
+    /* Pull letters slightly closer together. */
+    letter-spacing: -4px;
+}
+
+/* Styling for the word "rice". */
+.brand-rice {
+    font-weight: bold;
+    color: #111;
+}
+
+/* Styling for the word "paper". */
+.brand-paper {
+    font-style: italic;
+    font-weight: normal;
+    color: #888;
+}
+
+/* Small magazine description beside the logo. */
+.brand small {
+    /* Small Arial font. */
+    font: 9px Arial, sans-serif;
+
+    /* Spread the letters apart. */
+    letter-spacing: 1.4px;
+
+    /* Light grey colour. */
+    color: #888;
+
+    /* Add space between logo and description. */
+    margin: 0 0 3px 15px;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+/* Navigation container. */
+.main-nav {
+    /* Horizontal line above navigation. */
+    border-top: 1px solid #eee;
+
+    /* Space between line and menu items. */
+    padding-top: 16px;
+
+    /* Place menu links in a row. */
+    display: flex;
+
+    /* Space between each link. */
+    gap: 31px;
+
+    /* Vertically align menu items. */
+    align-items: center;
+}
+
+/* Individual navigation links. */
+.main-nav a {
+    font-size: 11px;
+    letter-spacing: 0.6px;
+    color: #444;
+}
+
+/* Change colour when mouse is over a menu item. */
+.main-nav a:hover {
+    color: #76aa91;
+}
+
+/* Mobile hamburger menu button. */
+.menu-button {
+    /* Hidden by default on desktop. */
+    display: none;
+
+    /* Remove normal button appearance. */
+    background: none;
+    border: 0;
+
+    /* Make hamburger symbol larger. */
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   HERO / FEATURED STORY
+========================================================= */
+
+/* Large featured-story section. */
+.hero {
+    /* Fixed desktop height. */
+    height: 430px;
+
+    /* Allows overlay text to be positioned inside. */
+    position: relative;
+
+    /* Hide any image content outside the hero area. */
+    overflow: hidden;
+
+    /* Dark background visible while image loads. */
+    background: #222;
+}
+
+/* Featured hero image. */
+.hero img {
+    /* Fill the full hero width. */
+    width: 100%;
+
+    /* Fill the full hero height. */
+    height: 100%;
+
+    /* Crop the image without stretching it. */
+    object-fit: cover;
+
+    /* Give the image a black-and-white magazine look. */
+    filter: grayscale(100%);
+
+    /* Darken the image so white text is easier to read. */
+    opacity: 0.72;
+}
+
+/* Text displayed on top of hero image. */
+.hero-overlay {
+    /* Position text relative to .hero. */
+    position: absolute;
+
+    /* Start from horizontal center. */
+    left: 50%;
+
+    /* Place text above bottom edge. */
+    bottom: 55px;
+
+    /* Move container back by half its width to truly center it. */
+    transform: translateX(-50%);
+
+    /* Keep text aligned with the main website content. */
+    width: min(1140px, calc(100% - 40px));
+
+    /* White text over dark image. */
+    color: white;
+}
+
+/* Small "FEATURED" label. */
+.hero-overlay .kicker {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* Main featured-story title. */
+.hero-overlay h1 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 38px;
+
+    /* Keep title from stretching across the entire screen. */
+    max-width: 650px;
+
+    /* Vertical spacing around heading. */
+    margin: 8px 0 10px;
+}
+
+/* Introductory paragraph under the hero title. */
+.hero-overlay > p:last-child {
+    max-width: 600px;
+    line-height: 1.6;
+    color: #eee;
+}
+
+
+/* =========================================================
+   MAIN PAGE LAYOUT
+========================================================= */
+
+/* Main wrapper containing articles and sidebar. */
+.page-wrap {
+    /* Limit overall content width. */
+    max-width: 1180px;
+
+    /* Center container and add top/bottom spacing. */
+    margin: 48px auto 70px;
+
+    /* Keep content away from browser edges. */
+    padding: 0 20px;
+
+    /* Use CSS Grid for main layout. */
+    display: grid;
+
+    /* Left side takes available space.
+       Right sidebar stays 310px wide. */
+    grid-template-columns: minmax(0, 2fr) 310px;
+
+    /* Space between article area and sidebar. */
+    gap: 48px;
+}
+
+
+/* =========================================================
+   ARTICLE GRID
+========================================================= */
+
+/* Container holding article cards. */
+.post-grid {
+    /* Use CSS Grid. */
+    display: grid;
+
+    /* Create two equal article columns. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    /* 48px vertical gap and 28px horizontal gap. */
+    gap: 48px 28px;
+}
+
+
+/* =========================================================
+   ARTICLE CARDS
+========================================================= */
+
+/* Article thumbnail images. */
+.post-card img {
+    /* Fill article-card width. */
+    width: 100%;
+
+    /* Keep all thumbnails at a consistent shape. */
+    aspect-ratio: 1.55 / 1;
+
+    /* Crop rather than stretch images. */
+    object-fit: cover;
+
+    /* Remove small inline-image spacing. */
+    display: block;
+}
+
+/* Article titles. */
+.post-card h2 {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: normal;
+    color: #292929;
+
+    /* Space above and below title. */
+    margin: 14px 0 8px;
+}
+
+/* Author and publication date. */
+.meta {
+    font-size: 10px;
+    color: #999;
+    margin-bottom: 12px;
+}
+
+/* Article summary paragraph. */
+.post-card p {
+    font-family: Georgia, serif;
+    color: #666;
+    line-height: 1.65;
+    font-size: 12px;
+    margin: 0 0 11px;
+}
+
+
+/* =========================================================
+   READ MORE LINKS
+========================================================= */
+
+/* "Read more" article links. */
+.read-more {
+    font-size: 10px;
+    color: #75ad94;
+}
+
+/* Add underline when hovering. */
+.read-more:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+/* Right-hand sidebar. */
+.sidebar {
+    /* Vertical divider between articles and sidebar. */
+    border-left: 1px solid #eee;
+
+    /* Space between divider and sidebar content. */
+    padding-left: 26px;
+}
+
+
+/* =========================================================
+   MAILING LIST
+========================================================= */
+
+/* Entire signup section. */
+.signup {
+    margin-bottom: 42px;
+}
+
+/* Shared heading style for signup and sidebar widgets. */
+.signup h3,
+.widget h3 {
+    /* Thin rectangular heading border. */
+    border: 1px solid #777;
+
+    /* Center heading text. */
+    text-align: center;
+
+    /* Space inside heading box. */
+    padding: 8px 5px;
+
+    font-size: 10px;
+    font-weight: normal;
+    letter-spacing: 0.4px;
+
+    /* Remove top margin and add bottom spacing. */
+    margin: 0 0 15px;
+}
+
+/* Labels above form inputs. */
+.signup label {
+    font-size: 9px;
+    display: block;
+    margin: 9px 0 5px;
+}
+
+/* Email/name form fields. */
+.signup input {
+    /* Make inputs fill sidebar width. */
+    width: 100%;
+
+    /* Consistent input height. */
+    height: 31px;
+
+    /* Light border. */
+    border: 1px solid #e3e3e3;
+
+    /* Inner spacing for typed text. */
+    padding: 5px;
+}
+
+/* Required-field message. */
+.signup p {
+    font-size: 8px;
+    color: #777;
+}
+
+/* Subscribe button. */
+.signup button {
+    /* Fill sidebar width. */
+    width: 100%;
+
+    /* Remove default button border. */
+    border: 0;
+
+    /* Light grey button. */
+    background: #f3f3f3;
+
+    color: #777;
+    padding: 10px;
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   DECORATIVE SIDEBAR BADGE
+========================================================= */
+
+/* Circular yellow badge. */
+.circle-badge {
+    width: 155px;
+    height: 155px;
+
+    /* Turn square into circle. */
+    border-radius: 50%;
+
+    /* Center badge and add vertical spacing. */
+    margin: 20px auto 45px;
+
+    /* Main badge colour. */
+    background: #efc64c;
+
+    /* Outer ring. */
+    border: 8px solid #f4d977;
+
+    /* Flexbox centers text inside the circle. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.05;
+}
+
+
+/* =========================================================
+   SIDEBAR WIDGETS
+========================================================= */
+
+/* Space below each widget. */
+.widget {
+    margin-bottom: 38px;
+}
+
+/* Widget images. */
+.widget img {
+    width: 100%;
+    display: block;
+}
+
+/* Widget description text. */
+.widget p {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #666;
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+/* Newer Posts / Older Posts row. */
+.pagination {
+    margin-top: 55px;
+
+    /* Divider above pagination. */
+    border-top: 1px solid #eee;
+
+    padding-top: 20px;
+
+    /* Put links at opposite sides. */
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 11px;
+    color: #75ad94;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+/* Entire footer area. */
+footer {
+    /* Dark footer background. */
+    background: #1d1d1d;
+
+    /* Default footer text colour. */
+    color: #aaa;
+
+    /* Space inside footer. */
+    padding: 45px 20px 18px;
+}
+
+/* Main footer row. */
+.footer-inner {
+    /* Match approximate width of page content. */
+    max-width: 1140px;
+
+    /* Center footer content. */
+    margin: auto;
+
+    /* Put brand on left and social text on right. */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Footer version of logo. */
+.footer-brand {
+    font: italic 35px Georgia, serif;
+    color: #fff;
+}
+
+/* Smaller footer text. */
+.footer-inner p,
+.social {
+    font-size: 11px;
+}
+
+/* Add spacing between social-media names. */
+.social {
+    word-spacing: 8px;
+}
+
+/* Bottom copyright section. */
+.copyright {
+    max-width: 1140px;
+    margin: 30px auto 0;
+
+    /* Divider above copyright. */
+    border-top: 1px solid #333;
+
+    padding-top: 16px;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE / MOBILE STYLES
+
+   Everything inside this media query is applied when the
+   browser window is 800px wide or narrower.
+========================================================= */
+
+@media (max-width: 800px) {
+
+    /* Reduce space at bottom of header. */
+    .header-inner {
+        padding-bottom: 15px;
+    }
+
+    /* Reduce spacing under logo. */
+    .brand {
+        margin-bottom: 5px;
+    }
+
+    /* Make logo smaller on phones/tablets. */
+    .brand-rice,
+    .brand-paper {
+        font-size: 43px;
+    }
+
+    /* Hide long logo description on smaller screens. */
+    .brand small {
+        display: none;
+    }
+
+    /* Show the hamburger button on mobile. */
+    .menu-button {
+        display: block;
+
+        /* Position it in upper-right corner of header. */
+        position: absolute;
+        right: 20px;
+        top: 31px;
+    }
+
+    /* Hide normal navigation until hamburger is clicked. */
+    .main-nav {
+        display: none;
+
+        /* When visible, stack links vertically. */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+
+        margin-top: 20px;
+    }
+
+    /* JavaScript adds the "open" class when the menu button is clicked.
+       This rule makes the navigation visible. */
+    .main-nav.open {
+        display: flex;
+    }
+
+
+    /* -------------------------
+       MOBILE HERO
+    -------------------------- */
+
+    /* Make hero slightly shorter on small screens. */
+    .hero {
+        height: 360px;
+    }
+
+    /* Reduce featured heading size. */
+    .hero-overlay h1 {
+        font-size: 29px;
+    }
+
+
+    /* -------------------------
+       MOBILE MAIN PAGE
+    -------------------------- */
+
+    /* Change articles + sidebar from two columns to one column. */
+    .page-wrap {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* -------------------------
+       MOBILE ARTICLES
+    -------------------------- */
+
+    /* Change article grid from two columns to one. */
+    .post-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* -------------------------
+       MOBILE SIDEBAR
+    -------------------------- */
+
+    .sidebar {
+        /* Remove vertical divider. */
+        border-left: 0;
+
+        /* Add horizontal divider above sidebar instead. */
+        border-top: 1px solid #eee;
+
+        /* Add space above sidebar content. */
+        padding: 35px 0 0;
+    }
+
+
+    /* -------------------------
+       MOBILE FOOTER
+    -------------------------- */
+
+    /* Stack footer sections instead of keeping them side-by-side. */
+    .footer-inner {
+        display: block;
+    }
+
+    /* Add space above social links. */
+    .social {
+        margin-top: 25px;
+    }
+}

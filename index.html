@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding lets the page display international characters correctly. -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the layout scale correctly on phones and tablets. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Text shown in the browser tab. -->
+  <title>Ricepaper — Sample Magazine</title>
+
+  <!-- Connect this HTML page to the external CSS file. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       SITE HEADER
+       Contains the logo and main navigation.
+  ========================== -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Magazine-style text logo. -->
+      <a class="brand" href="#">
+        <!-- Separate spans let CSS style "rice" and "paper" differently. -->
+        <span class="brand-rice">rice</span><span class="brand-paper">paper</span>
+
+        <!-- Small description beside the logo. -->
+        <small>ASIAN CANADIAN LITERARY &amp; ARTS MAGAZINE</small>
+      </a>
+
+      <!-- Mobile menu button.
+           It is hidden on desktop and displayed on small screens by CSS.
+           JavaScript uses this button to open/close the navigation. -->
+      <button class="menu-button" aria-label="Open menu">☰</button>
+
+      <!-- Main website navigation. -->
+      <nav class="main-nav">
+        <a href="#">ABOUT</a>
+        <a href="#">SUBMISSIONS</a>
+        <a href="#">CREATIVE WRITING</a>
+        <a href="#">ARTS &amp; CULTURE</a>
+        <a href="#">FEATURES</a>
+        <a href="#">EVENTS</a>
+        <a href="#">SHOP</a>
+
+        <!-- Simple text search icon for this demo. -->
+        <a href="#" aria-label="Search">🔍</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- =========================
+       MAIN PAGE CONTENT
+  ========================== -->
+  <main>
+
+    <!-- =========================
+         HERO / FEATURED STORY
+         Large image at the top of the page.
+    ========================== -->
+    <section class="hero">
+
+      <!-- Placeholder image from Picsum.
+           Replace the src with your own image URL or local image path. -->
+      <img
+        src="https://picsum.photos/seed/ricepaperhero/1600/680"
+        alt="Featured story"
+      >
+
+      <!-- Text placed over the hero image. -->
+      <div class="hero-overlay">
+        <p class="kicker">FEATURED</p>
+
+        <h1>Stories Across Cultures, Communities and Generations</h1>
+
+        <p>
+          Celebrating literature, art, identity and the many voices
+          that shape our communities.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- =========================
+         PAGE WRAPPER
+         Creates the main content area + sidebar layout.
+    ========================== -->
+    <div class="page-wrap">
+
+      <!-- =========================
+           LEFT CONTENT COLUMN
+      ========================== -->
+      <section class="content-column">
+
+        <!-- Grid containing all article cards. -->
+        <div class="post-grid">
+
+          <!-- ARTICLE 1 -->
+          <article class="post-card">
+
+            <!-- Article thumbnail. -->
+            <img
+              src="https://picsum.photos/seed/story1/720/430"
+              alt="Sample article"
+            >
+
+            <!-- Article title. -->
+            <h2>A New Year Story</h2>
+
+            <!-- Author and publication date. -->
+            <div class="meta">
+              by Mei Lin &nbsp; 18 September, 2026
+            </div>
+
+            <!-- Short article description. -->
+            <p>
+              A short reflection on family traditions, memory and
+              the small rituals that connect generations.
+            </p>
+
+            <!-- Link to the full article.
+                 "#" is only a placeholder in this demo. -->
+            <a class="read-more" href="#">Read more</a>
+          </article>
+
+
+          <!-- ARTICLE 2 -->
+          <article class="post-card">
+            <img
+              src="https://picsum.photos/seed/story2/720/430"
+              alt="Sample article"
+            >
+
+            <h2>Rooted in Community: A Journey with the Arts</h2>
+
+            <div class="meta">
+              by Daniel Wong &nbsp; 12 September, 2026
+            </div>
+
+            <p>
+              An interview about creative work, community building
+              and finding a place for new voices.
+            </p>
+
+            <a class="read-more" href="#">Read more</a>
+          </article>
+
+
+          <!-- ARTICLE 3 -->
+          <article class="post-card">
+            <img
+              src="https://picsum.photos/seed/story3/720/430"
+              alt="Sample article"
+            >
+
+            <h2>Words That Last</h2>
+
+            <div class="meta">
+              by Hana Lee &nbsp; 4 September, 2026
+            </div>
+
+            <p>
+              On language, handwriting and what remains after stories
+              pass from one person to another.
+            </p>
+
+            <a class="read-more" href="#">Read more</a>
+          </article>
+
+
+          <!-- ARTICLE 4 -->
+          <article class="post-card">
+            <img
+              src="https://picsum.photos/seed/story4/720/430"
+              alt="Sample article"
+            >
+
+            <h2>Rising Sounds of the City</h2>
+
+            <div class="meta">
+              by Alex Park &nbsp; 28 August, 2026
+            </div>
+
+            <p>
+              How music, migration and neighbourhood culture continue
+              to reshape contemporary identity.
+            </p>
+
+            <a class="read-more" href="#">Read more</a>
+          </article>
+
+
+          <!-- ARTICLE 5 -->
+          <article class="post-card">
+            <img
+              src="https://picsum.photos/seed/story5/720/430"
+              alt="Sample article"
+            >
+
+            <h2>Between Two Homes</h2>
+
+            <div class="meta">
+              by Clara Chen &nbsp; 20 August, 2026
+            </div>
+
+            <p>
+              A personal essay about belonging, distance and the
+              meaning of home across borders.
+            </p>
+
+            <a class="read-more" href="#">Read more</a>
+          </article>
+
+
+          <!-- ARTICLE 6 -->
+          <article class="post-card">
+            <img
+              src="https://picsum.photos/seed/story6/720/430"
+              alt="Sample article"
+            >
+
+            <h2>Notes from an Afternoon</h2>
+
+            <div class="meta">
+              by Sam Ito &nbsp; 8 August, 2026
+            </div>
+
+            <p>
+              A quiet piece of creative nonfiction about city streets,
+              chance meetings and observation.
+            </p>
+
+            <a class="read-more" href="#">Read more</a>
+          </article>
+
+        </div>
+
+
+        <!-- =========================
+             PAGINATION
+             Placeholder links for moving between article pages.
+        ========================== -->
+        <div class="pagination">
+          <a href="#">Newer Posts</a>
+          <a href="#">Older Posts</a>
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           RIGHT SIDEBAR
+      ========================== -->
+      <aside class="sidebar">
+
+        <!-- Mailing-list signup form. -->
+        <section class="signup">
+
+          <h3>SIGN UP FOR MAILING LIST</h3>
+
+          <!-- Email input. -->
+          <label for="email">Email Address*</label>
+          <input id="email" type="email">
+
+          <!-- First-name input. -->
+          <label for="first-name">First Name</label>
+          <input id="first-name" type="text">
+
+          <!-- Last-name input. -->
+          <label for="last-name">Last Name</label>
+          <input id="last-name" type="text">
+
+          <p>* = required field</p>
+
+          <!-- This button is visual only in the sample.
+               A real website would connect it to a mailing-list service. -->
+          <button type="button">SUBSCRIBE</button>
+        </section>
+
+
+        <!-- Decorative sidebar badge. -->
+        <section class="side-feature">
+          <div class="circle-badge">
+            LITERARY<br>
+            MAGAZINES<br>
+            COLLECTIVE
+          </div>
+        </section>
+
+
+        <!-- Podcast sidebar widget. -->
+        <section class="widget">
+          <h3>THE TALKRICE PODCAST</h3>
+
+          <img
+            src="https://picsum.photos/seed/podcast/500/270"
+            alt="Podcast"
+          >
+
+          <p>
+            Conversations with writers, artists and community voices.
+          </p>
+        </section>
+
+
+        <!-- Reading recommendations widget. -->
+        <section class="widget">
+          <h3>WHAT WE'RE READING</h3>
+
+          <img
+            src="https://picsum.photos/seed/books/500/300"
+            alt="Books"
+          >
+
+          <p>
+            Discover new and upcoming writers exploring culture,
+            identity and diaspora.
+          </p>
+        </section>
+
+      </aside>
+    </div>
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer>
+
+    <!-- Main footer content. -->
+    <div class="footer-inner">
+
+      <!-- Footer logo and description. -->
+      <div>
+        <div class="footer-brand">ricepaper</div>
+        <p>Literature · Culture · Arts</p>
+      </div>
+
+      <!-- Sample social-media links.
+           These are plain text placeholders. -->
+      <div class="social">
+        Facebook &nbsp; Twitter &nbsp; Instagram &nbsp; Email
+      </div>
+
+    </div>
+
+    <!-- Copyright area. -->
+    <div class="copyright">
+      © 2026 Sample Magazine. Demo website.
+    </div>
+  </footer>
+
+
+  <!-- Load JavaScript after the HTML content.
+       This lets JavaScript find the menu button and navigation elements. -->
+  <script src="script.js"></script>
+
+</body>
+</html>
